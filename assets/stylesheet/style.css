@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* CSS Custom Code */
+
+/* variables */
+:root {
+  --color-primary: #012e5b;
+  --color-accent: #fd656b;
+  --color-secondary: #191d34;
+  --color-text: #586879;
+  --color-text-alternate: #9da2ad;
+  --color-object: #aeb0b1;
+  --color-bg-light: #f8fafe;
+}
+
+/* General Styles */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.outer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
+}
+
+.flexible-img {
+  width: 100%;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------Home Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* -------------header------------------- */
+
+/* Typography */
+.header-address {
+  background-color: var(--color-primary);
+}
+
+.header-address a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.nav-menu-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 1.2px;
+}
+
+/* -------------hero------------------- */
+
+/* Typography */
+.hero-intro {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.hero-heading {
+  color: var(--color-primary);
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* -------------about------------------- */
+
+/* Typography */
+.article-heading-1 {
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.text {
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+.btn-tertiary {
+  font-size: 12px;
+  color: var(--color-secondary);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.divider-accent {
+  height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 4px solid var(--color-accent);
+  width: 40%;
+}
+
+.article-heading-2 {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* -------------services------------------- */
+
+/* Typography */
+.section-heading {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 2px solid var(--color-accent);
+}
+
+/* -------------cases------------------- */
+
+/* Typography */
+
+/* -------------testimonials------------------- */
+
+/* Typography */
+.object-color {
+  color: var(--color-object);
+}
+
+.article-text {
+  font-size: 20px;
+  color: var(--color-secondary);
+}
+
+.article-detail {
+  font-size: 14px;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+}
+
+.rated {
+  color: #fbba42;
+}
+
+.fa-star {
+  font-size: 12px;
+}
+
+/* -------------recent------------------- */
+
+/* Typography */
+.article-heading-3 {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.article-tag {
+  color: var(--color-accent);
+  font-size: 12px;
+}
+
+/* -------------contact------------------- */
+
+/* Typography */
+.contact {
+  background-color: var(--color-primary);
+}
+.dark-bg {
+  color: #fff;
+}
+
+.callback-form input,
+.callback-form select {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #295684;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+}
+
+.callback-form select option {
+  color: var(--color-secondary);
+}
+
+.callback-form input::placeholder {
+  color: #fff;
+  font-size: 12px;
+}
+
+.callback-form input {
+  color: #fff;
+}
+
+.callback-form select {
+  color: #fff;
+}
+
+.btn-submit {
+  text-transform: none;
+  font-size: 12px;
+}
+
+/* -------------footer------------------- */
+
+/* Typography */
+.footer {
+  background-color: var(--color-bg-light);
+}
+
+.footer a,
+footer address {
+  text-decoration: none;
+  color: var(--color-text-alternate);
+  font-size: 13px;
+}
+
+.color-primary {
+  color: var(--color-primary);
+}
+
+.footer .social-icons a {
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+.footer small {
+  font-size: 12px;
+  color: var(--color-text);
+}
+
+.color-accent {
+  color: var(--color-accent);
+}
