@@ -352,7 +352,7 @@ body {
   height: 80vh;
   display: flex;
   align-items: center;
-  background: url(./assets/media/hero/h1_hero.jpg) no-repeat center center;
+  background: url(../media/hero/h1_hero.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -743,7 +743,7 @@ footer address {
 
 /* typography */
 .hero-about {
-  background: url("/assets/media/hero/about_hero.jpg") no-repeat;
+  background: url(../media/hero/about_hero.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -768,7 +768,7 @@ footer address {
 
 /* typography */
 .hero-blog {
-  background: url("/assets/media/hero/blog_hero.jpg") no-repeat;
+  background: url(../media/hero/blog_hero.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -975,7 +975,7 @@ footer address {
 
 /* typography */
 .hero-cases {
-  background: url("/assets/media/hero/cases_hero.jpg") no-repeat;
+  background: url(../media/hero/cases_hero.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -1028,7 +1028,7 @@ footer address {
 
 /* typography */
 .hero-contact {
-  background: url("/assets/media/hero/contact_hero.jpg") no-repeat;
+  background: url(../media/hero/contact_hero.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -1121,7 +1121,7 @@ footer address {
 
 /* typography */
 .hero-services {
-  background: url("/assets/media/hero/services_hero.jpg") no-repeat;
+  background: url(../media/hero/services_hero.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
 }
