@@ -135,10 +135,12 @@ table {
   --color-primary: #012e5b;
   --color-accent: #fd656b;
   --color-secondary: #191d34;
-  --color-text: #586879;
-  --color-text-alternate: #9da2ad;
-  --color-object: #aeb0b1;
-  --color-bg-light: #f8fafe;
+  --color-text: #506172;
+  --color-text-light: #999;
+
+  --color-light-primary: #f8fafe;
+  --color-light-secondary: #fbf9ff;
+  --color-light-tertiary: #f0e8ff;
 }
 
 /* General Styles */
@@ -153,13 +155,51 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.flex-1-3 {
+  flex: 0 1 32%;
+}
+
+.flex-1-4 {
+  flex: 0 1 24%;
+}
+
+.flex-1-2 {
+  flex: 0 1 48.5%;
+}
+
+.flex-2-3 {
+  flex: 0 1 66%;
 }
 
 .container {
@@ -178,10 +218,51 @@ body {
   display: inline-block;
   padding: 12px 30px;
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .flexible-img {
-  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.margin-top {
+  margin-top: 36px;
+}
+
+.margin-bottom {
+  margin-bottom: 64px;
+}
+
+.margin-bottom-72 {
+  margin-bottom: 72px;
+}
+
+.margin-bottom-96 {
+  margin-bottom: 96px;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0px;
+}
+
+.margin-top-bottom {
+  margin-top: 128px;
+  margin-bottom: 128px;
+}
+
+.section-padding {
+  padding: 120px 0;
+}
+
+.article-heading-1 {
+  margin-bottom: 20px;
+}
+
+.text-light {
+  color: var(--color-text-light);
+  font-size: 16px;
+  line-height: 1.9;
 }
 
 /* ---------------------------------------------------------- */
@@ -217,6 +298,37 @@ body {
   font-weight: 500;
   border-radius: 4px;
   letter-spacing: 1.2px;
+  border: none;
+}
+
+/* layout */
+.header-address {
+  padding: 12px 0;
+}
+
+.address-location i,
+.address-mail i {
+  margin-right: 4px;
+}
+
+.address-mail {
+  margin-left: 48px;
+}
+
+.header-address .social-icons li {
+  margin-left: 24px;
+}
+
+.header-nav {
+  padding: 20px 0;
+}
+
+.nav-menu li {
+  margin-left: 32px;
+}
+
+.nav-menu .btn-primary {
+  margin-left: 36px;
 }
 
 /* -------------hero------------------- */
@@ -230,9 +342,22 @@ body {
 
 .hero-heading {
   color: var(--color-primary);
-  font-size: 48px;
+  font-size: 52px;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+/* layout */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background: url("/assets/media/hero/h1_hero.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.hero-headline {
+  width: 40%;
 }
 
 /* -------------about------------------- */
@@ -246,11 +371,18 @@ body {
 
 .text {
   color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.text-small {
+  color: var(--color-text);
   font-size: 12px;
+  line-height: 1.6;
 }
 
 .btn-tertiary {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--color-secondary);
   padding-left: 0;
   padding-right: 0;
@@ -271,16 +403,55 @@ body {
   font-size: 20px;
 }
 
+/* layout */
+.about-profile {
+  background-color: var(--color-light-primary);
+}
+
+.profile-heading {
+  padding: 32px 40px;
+  border: 4px solid var(--color-accent);
+  order: 1;
+  background-color: #fff;
+}
+
+.profile-skill-img {
+  order: -1;
+}
+
+.article-heading-2 {
+  margin: 20px 0;
+}
+
+/* second section */
+.about-clients-img {
+  flex: 0 1 60%;
+}
+
+.relative-position {
+  position: relative;
+}
+
+.about-clients-article {
+  position: absolute;
+  padding: 32px 120px 32px 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  right: 0;
+  max-width: 50%;
+}
+
 /* -------------services------------------- */
 
 /* Typography */
 .section-heading {
   font-size: 48px;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 72px;
 }
 
 .btn-secondary {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0);
   color: var(--color-accent);
   font-size: 12px;
   font-weight: 500;
@@ -288,15 +459,55 @@ body {
   border: 2px solid var(--color-accent);
 }
 
+.service-icon {
+  font-size: 32px;
+}
+
+/* layout */
+.services {
+  padding-top: 0;
+  text-align: center;
+}
+
+.service-container {
+  background-color: var(--color-light-primary);
+  padding: 72px;
+}
+
 /* -------------cases------------------- */
 
 /* Typography */
+.cases {
+  background-color: var(--color-light-primary);
+}
+
+/* layout */
+.cases-description {
+  flex: 0 1 40%;
+}
+
+.cases {
+  position: relative;
+  padding: 240px 0;
+}
+
+.cases-list {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  left: 50%;
+}
+
+.cases-list figure {
+  flex: 0 0 300px;
+  margin-right: 12px;
+}
 
 /* -------------testimonials------------------- */
 
 /* Typography */
 .object-color {
-  color: var(--color-object);
+  color: var(--color-text-light);
 }
 
 .article-text {
@@ -318,6 +529,28 @@ body {
   font-size: 12px;
 }
 
+/* layout */
+.testimonials {
+  text-align: center;
+}
+
+.testimonial {
+  padding: 48px;
+}
+
+.testimonial article {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial .article-text {
+  margin: 32px 0;
+}
+
+.testimonial .text {
+  margin-top: 16px;
+}
 /* -------------recent------------------- */
 
 /* Typography */
@@ -330,6 +563,34 @@ body {
 .article-tag {
   color: var(--color-accent);
   font-size: 12px;
+}
+
+/* layout */
+.news {
+  padding-top: 0;
+}
+.news-article {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-primary);
+}
+
+.news-article-img {
+  order: -1;
+}
+
+.news-article-text {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.news-article-text .article-tag {
+  order: -1;
+}
+
+.article-heading-3 {
+  margin: 16px 0 8px;
 }
 
 /* -------------contact------------------- */
@@ -373,19 +634,46 @@ body {
 .btn-submit {
   text-transform: none;
   font-size: 12px;
+  border: none;
+  cursor: pointer;
 }
 
+/* layout */
+.contact {
+  padding: 72px 0;
+}
+
+.contact-text {
+  flex: 0 1 25%;
+}
+
+.callback-form {
+  flex: 0 1 60%;
+}
+
+.callback-form .row-1 {
+  margin-bottom: 16px;
+}
+
+.callback-form #name,
+.callback-form #services {
+  margin-right: 16px;
+}
+
+.btn-submit {
+  flex: 0 1 35%;
+}
 /* -------------footer------------------- */
 
 /* Typography */
 .footer {
-  background-color: var(--color-bg-light);
+  background-color: var(--color-light-primary);
 }
 
 .footer a,
 footer address {
   text-decoration: none;
-  color: var(--color-text-alternate);
+  color: var(--color-text-light);
   font-size: 13px;
 }
 
@@ -405,4 +693,436 @@ footer address {
 
 .color-accent {
   color: var(--color-accent);
+}
+
+/* layout */
+.footer-p1 {
+  padding: 120px 0 80px;
+}
+.footer-p2 {
+  padding: 24px 0;
+  text-align: center;
+}
+
+.footer-about {
+  padding-right: 64px;
+}
+
+.footer-about,
+.footer-nav-services {
+  flex: 0 1 30%;
+}
+
+.footer-nav-company,
+.footer-address {
+  flex: 0 1 20%;
+}
+
+.footer .social-icons li {
+  margin-right: 12px;
+}
+
+.footer-about .text {
+  margin: 16px 0;
+}
+
+.divider-light {
+  height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddeafe;
+  width: 100%;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------About Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ------------------hero section --------------------*/
+
+/* typography */
+.hero-about {
+  background: url("/assets/media/hero/about_hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* layout */
+.hero-about .section-heading {
+  padding: 128px 0;
+  margin-bottom: 0;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------Blog Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ------------------hero section --------------------*/
+
+/* typography */
+.hero-blog {
+  background: url("/assets/media/hero/blog_hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* layout */
+.hero-blog .section-heading {
+  padding: 128px 0;
+  margin-bottom: 0;
+}
+
+/*--------------------- blog section -----------------*/
+/* typography */
+.blog-date {
+  background-color: var(--color-accent);
+  color: #fff;
+  font-size: 20px;
+  display: inline-block;
+  height: 96px;
+  width: 96px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+}
+
+.date-dd {
+  font-weight: 700;
+  font-size: 28px;
+}
+
+/* layout */
+
+.blog-date {
+  position: absolute;
+  bottom: -24px;
+  left: 32px;
+}
+
+.blog-metadata {
+  display: flex;
+}
+
+.blog-metadata i {
+  margin-right: 8px;
+}
+
+.metadata-separator {
+  margin: 0 16px;
+}
+
+.blog-text {
+  padding: 64px 32px 24px;
+  box-shadow: 0 0 24px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------------- blog navigation -----------------*/
+/* typography */
+.blog-pagenav {
+  display: flex;
+  justify-content: center;
+}
+.pagenav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #8a8a8a;
+  height: 48px;
+  width: 48px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid var(--color-light-tertiary);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.page-current {
+  background-color: var(--color-light-secondary);
+}
+
+/*--------------------- aside: search -----------------*/
+/* typography */
+.aside-section {
+  background-color: var(--color-light-secondary);
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.btn-4 {
+  background-color: #fff;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 1px solid var(--color-accent);
+  width: 100%;
+}
+
+.btn-search {
+  border-radius: 0;
+  font-size: 16px;
+  padding: 0 8px;
+  height: 48px;
+  flex: 0 1 20%;
+}
+
+.input-secondary {
+  padding: 0px 20px;
+  height: 48px;
+  border: 1px solid var(--color-light-tertiary);
+  border-radius: 0;
+}
+
+.input-secondary::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+.input-search {
+  flex: 0 1 80%;
+}
+
+.search {
+  margin-bottom: 16px;
+}
+
+/*--------------------- aside: category -----------------*/
+/* typography */
+.divider-bottom {
+  border-bottom: 1px solid var(--color-light-tertiary);
+  margin-bottom: 16px;
+}
+
+/* layout */
+.divider-spacing {
+  padding-bottom: 16px;
+  margin-top: 0;
+}
+
+/*--------------------- aside: recent post -----------------*/
+/* layout */
+.recent-post {
+  margin-top: 24px;
+}
+
+.recent-post img {
+  margin-right: 24px;
+}
+
+.recent-post-list {
+  margin-top: 48px;
+}
+
+/*--------------------- aside: tag cloud -----------------*/
+/* typography */
+.tagcloud-tag {
+  text-decoration: none;
+  display: inline-block;
+  padding: 4px 20px;
+  border: 1px solid #eee;
+  margin-right: 8px;
+  margin-bottom: 12px;
+  background-color: #fff;
+}
+
+/* layout */
+
+.tagcloud {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+/*--------------------- aside: ig feed -----------------*/
+/* typography */
+
+.ig-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+.ig-grid figure {
+  margin-bottom: 4px;
+}
+
+/*--------------------- aside: newsletter -----------------*/
+/* layout */
+.input-newsletter {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------Case Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ------------------hero section --------------------*/
+
+/* typography */
+.hero-cases {
+  background: url("/assets/media/hero/cases_hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* layout */
+.hero-cases .section-heading {
+  padding: 128px 0;
+  margin-bottom: 0;
+}
+
+/* ------------------cases section --------------------*/
+/* typography */
+.case-text {
+  background-color: #fff;
+}
+
+.cases {
+  background-color: var(--color-light-primary);
+}
+
+/* layout*/
+.case-title {
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.case-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 20%;
+  padding: 20px 32px;
+}
+
+.case-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.case {
+  margin-bottom: 24px;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------Contact Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ------------------hero section --------------------*/
+
+/* typography */
+.hero-contact {
+  background: url("/assets/media/hero/contact_hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* layout */
+.hero-contact .section-heading {
+  padding: 128px 0;
+  margin-bottom: 0;
+}
+
+/* ------------------contact form section --------------------*/
+
+.input-contact {
+  border: 1px solid #e5e6e9;
+}
+
+.textarea-contact {
+  padding: 16px 20px;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  width: 100%;
+  display: block;
+}
+
+.textarea-contact::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.contactform-subject {
+  width: 100%;
+}
+
+.contactform > * {
+  margin-bottom: 20px;
+}
+
+.contactform .btn {
+  width: auto;
+  padding: 16px 36px;
+}
+
+/* ------------------contact info section --------------------*/
+
+/* typography */
+.contactinfo a {
+  text-decoration: none;
+}
+
+.contactinfo-primary {
+  color: #2a2a2a;
+}
+
+.contactinfo-secondary,
+.contactinfo-icon {
+  color: #9b9b9b;
+}
+
+.contactinfo-icon {
+  font-size: 24px;
+}
+
+/* layout */
+.contactinfo-link {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.contactinfo-icon {
+  margin-right: 16px;
+  flex: 0 1 10%;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------- */
+/* ----------------------Services Page--------------------------- */
+/* ---------------------------------------------------------- */
+
+/* ------------------hero section --------------------*/
+
+/* typography */
+.hero-services {
+  background: url("/assets/media/hero/services_hero.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* layout */
+.hero-services .section-heading {
+  padding: 128px 0;
+  margin-bottom: 0;
+}
+/* ------------------services and recent news section --------------------*/
+
+/* layout */
+
+.services-main .services,
+.services-main .news {
+  padding-top: 120px;
 }
