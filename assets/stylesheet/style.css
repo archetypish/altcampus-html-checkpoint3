@@ -352,7 +352,7 @@ body {
   height: 80vh;
   display: flex;
   align-items: center;
-  background: url("/assets/media/hero/h1_hero.jpg") no-repeat center center;
+  background: url(./assets/media/hero/h1_hero.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -754,6 +754,12 @@ footer address {
   margin-bottom: 0;
 }
 
+/* ------------------about section --------------------*/
+/* layout */
+.about-main .about-clients {
+  padding-bottom: 0;
+}
+
 /* ---------------------------------------------------------- */
 /* ----------------------Blog Page--------------------------- */
 /* ---------------------------------------------------------- */
@@ -1031,6 +1037,13 @@ footer address {
 .hero-contact .section-heading {
   padding: 128px 0;
   margin-bottom: 0;
+}
+
+/* ------------------map section --------------------*/
+
+/* layout */
+.map {
+  margin-bottom: 60px;
 }
 
 /* ------------------contact form section --------------------*/
